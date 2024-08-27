@@ -1,13 +1,8 @@
-import { House} from 'lucide-react';
-import { Users } from 'lucide-react';
-import { HandPlatter } from 'lucide-react';
-import { Contact } from 'lucide-react';
+
 import { useEffect, useState } from 'react';
 import { Menu } from 'lucide-react';
 import { Plus } from 'lucide-react'
-import { Banknote } from 'lucide-react';
 
-// import {isSiderVisible} from "./Navbar"
 
 
 const Sider = () => {
@@ -35,21 +30,36 @@ const Sider = () => {
       <div className="siderbar">
         <div className={`Sider ${isSiderVisible ? "" : "hidden"}`}>
         <button onClick={handleSiderToggle}>
-        {isSiderVisible ? <Menu size={28} color="#000000" strokeWidth={1.75} />: <Plus size={28} color="#000000" strokeWidth={1.75} />}
-      </button>
+        {isSiderVisible ? <Menu size={23} color="#000000" strokeWidth={1.75} />: <Plus size={23} color="#000000" strokeWidth={1.75} />}
+          </button>
+          <div className={`sider-field ${isSiderVisible ? "" : "small"}`}>
+          {isSiderVisible ?  <input type="text" placeholder="Search accounts"/> : <span className="sider-logo"><img src="search.png" alt="" /></span>}
+          </div>
         <div className="Options">
           <ul>
-            <li className={`list ${isSiderVisible ? "" : "small"}`}>
-              {isSiderVisible ? <span style={{marginTop : "10px"}}> <Banknote size={24} color="black" strokeWidth={1.75} /> Home</span> : <Banknote size={24} color="black" strokeWidth={1.75} />}
+             <li className={`list ${isSiderVisible ? "" : "small"}`}>
+              {isSiderVisible ? <span><p>$20.98M</p><p>12.6%</p> </span> : <span className="sider-logo"><img src="grid.png" alt="" /></span>}
             </li>
             <li className={`list ${isSiderVisible ? "" : "small"}`}>
-              {isSiderVisible ? 'About' : <Users />}
+              {isSiderVisible ? <span><p>Cash</p><p>$2.80M</p> </span>: <span className="sider-logo"><img src="money.png" alt="" /></span>}
+            </li>   
+            <li className={`list ${isSiderVisible ? "" : "small"}`}>
+              {isSiderVisible ? <span><p>Public Assets</p><p>$1.85M</p> </span> : <span className="sider-logo"><img src="signal-status.png" alt="" /></span>}  
             </li>
             <li className={`list ${isSiderVisible ? "" : "small"}`}>
-              {isSiderVisible ? 'Service' : <HandPlatter />}
+              {isSiderVisible ? <span><p>Crypto</p><p>$341.43K</p> </span> : <span className="sider-logo"><img src="bitcoin.png" alt="" /></span>}    
             </li>
             <li className={`list ${isSiderVisible ? "" : "small"}`}>
-              {isSiderVisible ? 'Contact' : <Contact />}
+              {isSiderVisible ? <span><p>Company Equity</p><p>$8.85M</p> </span> : <span className="sider-logo"><img src="pie-chart.png" alt="" /></span>}
+            </li>
+            <li className={`list ${isSiderVisible ? "" : "small"}`}>
+              {isSiderVisible ? <span><p>Private Investment</p><p>$610.50K</p> </span> : <span className="sider-logo"><img src="bar-chart.png" alt="" /></span>}
+            </li>
+            <li className={`list ${isSiderVisible ? "" : "small"}`}>
+              {isSiderVisible ? <span><p>Fund Investments</p><p>$455.00K</p> </span> : <span className="sider-logo"><img src="venn-diagram.png" alt="" /></span>}
+            </li>
+            <li className={`list ${isSiderVisible ? "" : "small"}`}>
+              {isSiderVisible ? <span><p>Real Estate</p><p>$3.90M</p> </span> : <span className="sider-logo"><img src="home.png" alt="" /></span>}
             </li>
           </ul>
         </div>
