@@ -10,7 +10,7 @@ function App() {
   return (
     <>
      <Navbar/>
-     <Content/>1
+     <Content/>
     </>
   )
 }

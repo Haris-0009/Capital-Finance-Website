@@ -22,13 +22,10 @@ const Content = () => {
                     <button>Flows</button>
                     </div>
                         <span>&#124;</span>
-                        <div className="menu-btn">
-                        <button><Ellipsis/></button>
-
-                        </div>
-
+                    <div className="menu-btn">
+                    <button><Ellipsis/></button>
+                    </div>
                 </div>
-
             </div>
         <Sider/>
         </div>
