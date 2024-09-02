@@ -1,12 +1,12 @@
 import { Ellipsis } from "lucide-react";
 import Sider from "./Sider";
+import Maingrid from "./Maingrid";
 
 
 const Content = () => {
     return (
-
         <>
-        <div className="main-content"> 
+            <div className="main-content"> 
             <div className="head">
                 <div className="head-title">
                     <img src="/money-bag.png" alt="" />
@@ -27,9 +27,18 @@ const Content = () => {
                     </div>
                 </div>
             </div>
-        <Sider/>
+            <div className="main-dashbord" style={{ display: "flex", justifyContent: "space-between" }}>
+                <div className="sider-div">
+                    <Sider /> 
+                </div>
+                <div className="dashboard-div">
+                    <Maingrid/>  
+                </div>
+            </div>
         </div>
+            
         </>
+
     )
 
 
