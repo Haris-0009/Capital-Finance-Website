@@ -1,7 +1,72 @@
 import { FastForward } from 'lucide-react';
 import React, { useState } from 'react'
+import logo from "../../public/download.png"
+import wells from "../../public/wells.png"
+import figma from "../../public/figma.png"
+import mercury from "../../public/mercury.png"
+import venguard from "../../public/venguard.png"
 
 const Maingrid = () => {
+
+  const tableData = [
+    {
+      image: logo,
+      assets: "Stripe",
+      assetsClass: "Company Equality",
+      assetsOf: "24.14%",
+      value: "$4.800,000.00",
+      allTimeReturn: "100%"
+    },
+    {
+      image: wells,
+      assets: "Wells Fargo",
+      assetsClass: "Cash",
+      assetsOf: "13.36%",
+      value: "$2,708,336.20",
+      allTimeReturn: "25%"
+    },
+    {
+      image: figma,
+      assets: "Figma",
+      assetsClass: "Company Equality",
+      assetsOf: "12.50%",
+      value: "$2,500,000.00",
+      allTimeReturn: "18%"
+    },
+    {
+      image: mercury,
+      assets: "Mercury",
+      assetsClass: "Company Equality",
+      assetsOf: "12.40%",
+      value: "$2,400,000.00",
+      allTimeReturn: "12%"
+    },
+    {
+      image: venguard,
+      assets: "Vanguard 401k",
+      assetsClass: "Public Assets",
+      assetsOf: "4.69%",
+      value: "$951,445.80",
+      allTimeReturn: "32%"
+    },
+    {
+      image: wells,
+      assets: "Wells Fargo",
+      assetsClass: "Real Estate",
+      assetsOf: "12.36%",
+      value: "$3,400,800.00",
+      allTimeReturn: "26%"
+    },
+    {
+      image: figma,
+      assets: "Figma",
+      assetsClass: "Cash",
+      assetsOf: "41.12%",
+      value: "$4,400,000.00",
+      allTimeReturn: "21%"
+    }
+
+  ]
 
   // For Green Divs
   const [bigdiv, setbigdiv] = useState(false);
@@ -84,7 +149,7 @@ const Maingrid = () => {
   const [pinkbigdiv6, setpinkbigdiv6] = useState(false)
   const [pinkbigdiv7, setpinkbigdiv7] = useState(false)
 
-  const handletoggle1 = () =>{
+  const handletoggle1 = () => {
     setpinkbigdiv1(true)
     setpinkbigdiv2(false)
     setpinkbigdiv3(false)
@@ -104,7 +169,7 @@ const Maingrid = () => {
     setpinkbigdiv7(false)
   }
 
-  const handletoggle3 = () =>{
+  const handletoggle3 = () => {
     setpinkbigdiv1(false)
     setpinkbigdiv2(false)
     setpinkbigdiv3(true)
@@ -114,7 +179,7 @@ const Maingrid = () => {
     setpinkbigdiv7(false)
   }
 
-  const handletoggle4 = () =>{
+  const handletoggle4 = () => {
     setpinkbigdiv1(false)
     setpinkbigdiv2(false)
     setpinkbigdiv3(false)
@@ -124,7 +189,7 @@ const Maingrid = () => {
     setpinkbigdiv7(false)
   }
 
-  const handletoggle5 = () =>{
+  const handletoggle5 = () => {
     setpinkbigdiv1(false)
     setpinkbigdiv2(false)
     setpinkbigdiv3(false)
@@ -196,7 +261,7 @@ const Maingrid = () => {
 
 
 
-  
+
 
   return (
     <div className="Flex-Grid">
@@ -231,7 +296,7 @@ const Maingrid = () => {
               </div>
             </div>
             <div className={`green ${bigdiv1 ? "" : "green-card"}`} onClick={handeltooge2}>
-            <div className="read-per">
+              <div className="read-per">
                 <div className="percent">
                   66.6%
                 </div>
@@ -239,7 +304,7 @@ const Maingrid = () => {
               </div>
             </div>
             <div className={`green ${bigdiv2 ? "" : "green-card"}`} onClick={handeltooge3}>
-            <div className="read-per">
+              <div className="read-per">
                 <div className="percent">
                   50.6%
                 </div>
@@ -247,7 +312,7 @@ const Maingrid = () => {
               </div>
             </div>
             <div className={`green ${bigdiv3 ? "" : "green-card"}`} onClick={handeltooge4}>
-            <div className="read-per">
+              <div className="read-per">
                 <div className="percent">
                   11.6%
                 </div>
@@ -255,7 +320,7 @@ const Maingrid = () => {
               </div>
             </div>
             <div className={`green ${bigdiv4 ? "" : "green-card"}`} onClick={handeltooge5}>
-            <div className="read-per">
+              <div className="read-per">
                 <div className="percent">
                   21.6%
                 </div>
@@ -263,7 +328,7 @@ const Maingrid = () => {
               </div>
             </div>
             <div className={`green ${bigdiv5 ? "" : "green-card"}`} onClick={handeltooge6}>
-            <div className="read-per">
+              <div className="read-per">
                 <div className="percent">
                   13.6%
                 </div>
@@ -273,7 +338,7 @@ const Maingrid = () => {
           </div>
           <div className="reading-pink">
             <div className={`pink ${pinkbigdiv1 ? "" : "pink-card"}`} onClick={handletoggle1}>
-            <div className="read-per-pink">
+              <div className="read-per-pink">
                 <div className="pink-percent">
                   88.6%
                 </div>
@@ -281,7 +346,7 @@ const Maingrid = () => {
               </div>
             </div>
             <div className={`pink ${pinkbigdiv2 ? "" : "pink-card"}`} onClick={handletoggle2}>
-            <div className="read-per-pink">
+              <div className="read-per-pink">
                 <div className="pink-percent">
                   56.9%
                 </div>
@@ -289,7 +354,7 @@ const Maingrid = () => {
               </div>
             </div>
             <div className={`pink ${pinkbigdiv3 ? "" : "pink-card"}`} onClick={handletoggle3}>
-            <div className="read-per-pink">
+              <div className="read-per-pink">
                 <div className="pink-percent">
                   34.0%
                 </div>
@@ -297,7 +362,7 @@ const Maingrid = () => {
               </div>
             </div>
             <div className={`pink ${pinkbigdiv4 ? "" : "pink-card"}`} onClick={handletoggle4}>
-            <div className="read-per-pink">
+              <div className="read-per-pink">
                 <div className="pink-percent">
                   25.8%
                 </div>
@@ -305,7 +370,7 @@ const Maingrid = () => {
               </div>
             </div>
             <div className={`pink ${pinkbigdiv5 ? "" : "pink-card"}`} onClick={handletoggle5}>
-            <div className="read-per-pink">
+              <div className="read-per-pink">
                 <div className="pink-percent">
                   20.1%
                 </div>
@@ -313,7 +378,7 @@ const Maingrid = () => {
               </div>
             </div>
             <div className={`pink ${pinkbigdiv6 ? "" : "pink-card"}`} onClick={handletoggle6}>
-            <div className="read-per-pink">
+              <div className="read-per-pink">
                 <div className="pink-percent">
                   6.41%
                 </div>
@@ -321,7 +386,7 @@ const Maingrid = () => {
               </div>
             </div>
             <div className={`pink ${pinkbigdiv7 ? "" : "pink-card"}`} onClick={handletoggle7}>
-            <div className="read-per-pink">
+              <div className="read-per-pink">
                 <div className="pink-percent">
                   4.10%
                 </div>
@@ -331,7 +396,7 @@ const Maingrid = () => {
           </div>
           <div className="reading-purple">
             <div className={`purple ${purplebigdiv1 ? "" : "purple-card"}`} onClick={handletogglepurple1}>
-            <div className="read-per-purple">
+              <div className="read-per-purple">
                 <div className="purple-percent">
                   50.0%
                 </div>
@@ -339,7 +404,7 @@ const Maingrid = () => {
               </div>
             </div>
             <div className={`purple ${purplebigdiv2 ? "" : "purple-card"}`} onClick={handletogglepurple2}>
-            <div className="read-per-purple">
+              <div className="read-per-purple">
                 <div className="purple-percent">
                   26.5%
                 </div>
@@ -347,7 +412,7 @@ const Maingrid = () => {
               </div>
             </div>
             <div className={`purple ${purplebigdiv3 ? "" : "purple-card"}`} onClick={handletogglepurple3}>
-            <div className="read-per-purple">
+              <div className="read-per-purple">
                 <div className="purple-percent">
                   24.5%
                 </div>
@@ -357,7 +422,7 @@ const Maingrid = () => {
           </div>
           <div className="reading-yellow">
             <div className={`yellow ${yellowbigdiv1 ? "" : "yellow-card"}`} onClick={handletoggleyellow1}>
-            <div className="read-per-yellow">
+              <div className="read-per-yellow">
                 <div className="yellow-percent">
                   7.5%
                 </div>
@@ -365,7 +430,7 @@ const Maingrid = () => {
               </div>
             </div>
             <div className={`yellow ${yellowbigdiv2 ? "" : "yellow-card"}`} onClick={handletoggleyellow2}>
-            <div className="read-per-yellow">
+              <div className="read-per-yellow">
                 <div className="yellow-percent">
                   12.0%
                 </div>
@@ -376,24 +441,57 @@ const Maingrid = () => {
         </div>
         <div className="reading-name">
           <p><span className="cash">&#9864;</span> Cash</p>
-          <p><span className="public">&#9864;</span> Public Assets</p> 
-          <p><span className="equity">&#9864;</span> Company Equity</p> 
-          <p><span className="real">&#9864;</span> Real Estate</p> 
+          <p><span className="public">&#9864;</span> Public Assets</p>
+          <p><span className="equity">&#9864;</span> Company Equity</p>
+          <p><span className="real">&#9864;</span> Real Estate</p>
         </div>
       </div>
       <div className="Down">
         <div className="Down-head">
-          <div className="Down-head-right"> 
+          <div className="Down-head-left">
             <div className="mode-btns">
               <button>Dark</button>
               <button>Light</button>
             </div>
           </div>
-          <div className="Down-head-left">
-
-
+          <div className="Down-head-right">
+            <div className="right-btns">
+              <button>Assets Classes</button>
+              <button>Assets</button>
+            </div>
+            <div className="right-right-btns">
+              <button>All</button>
+              <button>Weight H&#62;L <span>&#8645;</span></button>
+            </div>
           </div>
-
+        </div>
+        <hr className="line" />
+        <div className="main-div">
+          <div className="Dashboard-graph">
+            <img src="graph.png" alt="" />
+          </div>
+          <div className="Dashboard-table">
+            <tr>
+              <th className="table-heading"></th>
+              <th>Assets</th>
+              <th>Assets Classes</th>
+              <th>% of Assets</th>
+              <th>Value</th>
+              <th>All-time Return++</th>
+            </tr>
+            {
+              tableData.map((item, key) => (
+                <tr>
+                  <td className="table-img"><img src={item?.image} alt="item?.image" /></td>
+                  <td><div></div>{item?.assets}</td>
+                  <td>{item?.assetsClass}</td>
+                  <td>{item?.value}</td>
+                  <td>{item?.assetsOf}</td>
+                  <td>{item?.allTimeReturn}</td>
+                </tr>
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>
