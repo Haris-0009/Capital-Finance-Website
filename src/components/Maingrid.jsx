@@ -8,10 +8,19 @@ import venguard from "../../public/venguard.png"
 
 const Maingrid = () => {
 
+
+  const [tabledarkmode, settabledarkmode] = useState(true)
+  
+  
+  const handledarkmode = () =>{
+    settabledarkmode(prev => !prev)
+  } 
+
   const tableData = [
     {
       image: logo,
-      assets: "Stripe",
+      assets: "Stripe" ,
+      assets_line: "Vested Options. 175k shares",
       assetsClass: "Company Equality",
       assetsOf: "24.14%",
       value: "$4.800,000.00",
@@ -20,6 +29,7 @@ const Maingrid = () => {
     {
       image: wells,
       assets: "Wells Fargo",
+      assets_line: "USD . $3M ",
       assetsClass: "Cash",
       assetsOf: "13.36%",
       value: "$2,708,336.20",
@@ -28,6 +38,7 @@ const Maingrid = () => {
     {
       image: figma,
       assets: "Figma",
+      assets_line: "Vested Options. 24K shares",
       assetsClass: "Company Equality",
       assetsOf: "12.50%",
       value: "$2,500,000.00",
@@ -36,6 +47,7 @@ const Maingrid = () => {
     {
       image: mercury,
       assets: "Mercury",
+      assets_line: "Common Shares. 10K shares",
       assetsClass: "Company Equality",
       assetsOf: "12.40%",
       value: "$2,400,000.00",
@@ -44,6 +56,7 @@ const Maingrid = () => {
     {
       image: venguard,
       assets: "Vanguard 401k",
+      assets_line: "USD . $951K",
       assetsClass: "Public Assets",
       assetsOf: "4.69%",
       value: "$951,445.80",
@@ -52,18 +65,11 @@ const Maingrid = () => {
     {
       image: wells,
       assets: "Wells Fargo",
+      assets_line: "USD . $3M",
       assetsClass: "Real Estate",
       assetsOf: "12.36%",
       value: "$3,400,800.00",
       allTimeReturn: "26%"
-    },
-    {
-      image: figma,
-      assets: "Figma",
-      assetsClass: "Cash",
-      assetsOf: "41.12%",
-      value: "$4,400,000.00",
-      allTimeReturn: "21%"
     }
 
   ]
@@ -260,9 +266,6 @@ const Maingrid = () => {
 
 
 
-
-
-
   return (
     <div className="Flex-Grid">
       <div className="Up">
@@ -450,8 +453,10 @@ const Maingrid = () => {
         <div className="Down-head">
           <div className="Down-head-left">
             <div className="mode-btns">
-              <button>Dark</button>
-              <button>Light</button>
+              <button onClick={handledarkmode}>
+                {tabledarkmode ? 'Dark' : 'Light'}
+              </button>
+              <button>Liabilities</button>
             </div>
           </div>
           <div className="Down-head-right">
@@ -470,20 +475,20 @@ const Maingrid = () => {
           <div className="Dashboard-graph">
             <img src="graph.png" alt="" />
           </div>
-          <div className="Dashboard-table">
+          <div className={`Dashboard-table ${tabledarkmode ? "" : "Dashboard-dark-table"}`}>
             <tr>
               <th className="table-heading"></th>
-              <th>Assets</th>
+              <th className="assets">Assets</th>
               <th>Assets Classes</th>
               <th>% of Assets</th>
               <th>Value</th>
-              <th>All-time Return++</th>
+              <th>All-time Return</th>
             </tr>
             {
               tableData.map((item, key) => (
                 <tr>
                   <td className="table-img"><img src={item?.image} alt="item?.image" /></td>
-                  <td><div></div>{item?.assets}</td>
+                  <td>{item?.assets} <br/> <span>{item?.assets_line}</span></td>
                   <td>{item?.assetsClass}</td>
                   <td>{item?.value}</td>
                   <td>{item?.assetsOf}</td>
