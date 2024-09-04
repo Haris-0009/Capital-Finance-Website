@@ -73,8 +73,9 @@
 }
 
 .add-btn.add-btn-hide button {
-  border: none;
-  border-bottom: 2px solid #aacbfd;
+  border: 2px solid #ecf1f4;
+  width: 44px;
+  /* border-bottom: 2px solid #aacbfd; */
 
 }
 
@@ -132,6 +133,7 @@
   background-color: #FFFFFF;
   border-radius: 10px;
   margin-bottom: 10px;
+  border: 2px solid #ecf1f4;
 }
 
 .sider-btn button:hover {
@@ -149,6 +151,7 @@
   width: 95%;
   border-radius: 8px;
   transition: width 0.3s ease-in-out;
+  border: 2px solid #ecf1f4;
 }
 
 .sider-line {
@@ -168,7 +171,7 @@
   padding-bottom: 8px;
   border-radius: 8px;
   transition: width 0.3s ease-in-out, transform 0.3s;
-  border-bottom: 2px solid #aacbfd;
+  border: 2px solid #ecf1f4;
   margin-bottom: 8px;
 }
 
@@ -178,7 +181,7 @@
   border-color: #aacbfd;
 }
 
-.list {
+.list{
   cursor: pointer;
   padding-top: 8px;
   padding-left: 8px;
@@ -188,6 +191,7 @@
   border-radius: 8px;
   justify-content: space-between;
   transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+  border: 2px solid #ecf1f4;
   font-size: 13px;
 }
 
@@ -212,7 +216,7 @@
 .list.small {
   width: 23px;
   transition: width 0.3s ease-in-out, transform 0.3s;
-  border-bottom: 2px solid #aacbfd;
+  /* border-bottom: 2px solid #aacbfd; */
 }
 
 .list.small:hover {
@@ -401,12 +405,11 @@
   gap: 10px;
 }
 
-.Up {
+.Up{
   height: auto;
   background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
-
 }
 
 .Up:hover {
@@ -511,8 +514,7 @@
   padding: 10px;
   border-radius: 15px;
   /* transition: height 0.3s ease; */
-  transition: background-color 0.5s ease;
-  transition: height 0.5s ease;
+  transition: background-color 0.5s ease, height 0.5s ease;
 }
 
 .green .read-per{
@@ -542,8 +544,10 @@
 
 .green.green-card{
   height: auto;
-  transition: height 0.9s ;
+  /* transition: height 0.9s ; */
   background-color: #e7f4b3;
+  transition: height 0.5s ease-in-out !important;
+
 }
 
 
@@ -847,8 +851,10 @@
   align-items: center;
 }
 
-.Dashboard-graph img{
-width: 380px;
+.Dashboard-table img{
+  /* margin-top: 10px; */
+  align-items: center;
+ width: 380px;
 }
 
 
@@ -903,14 +909,14 @@ width: 380px;
   padding-right: -100px ;
 }
 
- .table-img{ 
+.table-img{ 
   width: 5px;
 }
 
 .table-img img{
   width: 20px;
   height: 20px;
-  margin-left: 90px;
+  margin-left: 70px;
   object-fit: cover;
   object-position: center;
   border-radius: 10px;

@@ -472,8 +472,8 @@ const Maingrid = () => {
         </div>
         <hr className="line" />
         <div className="main-div">
-          <div className="Dashboard-graph">
-            <img src="graph.png" alt="" />
+          <div className={`Dashboard-table ${tabledarkmode ? "" : "Dashboard-dark-table"}`}>
+            <img src="graph.png" alt="graph" />
           </div>
           <div className={`Dashboard-table ${tabledarkmode ? "" : "Dashboard-dark-table"}`}>
             <tr>
